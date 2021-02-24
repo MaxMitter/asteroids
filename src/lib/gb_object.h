@@ -81,13 +81,13 @@ public:
 
 protected:
 
-	gb_object(wxPoint pos, wxPoint size)
+	gb_object(wxPoint pos, wxSize size)
 		: m_position{pos}
 		, m_size{size}
 	{}
 
 	wxPoint m_position{};
-	wxPoint m_size{};
+	wxSize m_size{};
 	std::unique_ptr<shape> m_shape{};
 
 	int m_speed{ 0 };

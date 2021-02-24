@@ -13,6 +13,8 @@ class shape : public ml5::object, MI5_DERIVE(shape, ml5::object) {
 			, m_box{ box }
 		{}
 
+		explicit shape(const wxRect &box) : m_box{box} {}
+
 		void draw(context_t &context) {
 			context.SetBrush(m_brush);
 			context.SetPen(m_pen);
